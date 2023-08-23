@@ -124,14 +124,17 @@ def play(throw, hand_p1, hand_p2, communal, deck, moves):
         tokens_p1 = addOrRemoveTokens(tokens_p1, bet, True)
         tokens_p2 = addOrRemoveTokens(tokens_p2, bet, False)
         print("\nEmpate! Parabéns você venceu, Total de fichas: " + str(tokens_p1))
+        print("\nFichas do P2: " + str(tokens_p2))
     elif value_p1 > value_p2:
         tokens_p1 = addOrRemoveTokens(tokens_p1, bet, True)
         tokens_p2 = addOrRemoveTokens(tokens_p2, bet, False)
         print("\nVocê venceu! (%s) Total de fichas: %s" % (combination_p1, tokens_p1))
+        print("\nFichas do P2: " + str(tokens_p2))
     else:
         tokens_p1 = addOrRemoveTokens(tokens_p1, bet, False)
         tokens_p2 = addOrRemoveTokens(tokens_p2, bet, True)
         print("\nVocê perdeu... Total de fichas: " + str(tokens_p1))
+        print("\nFichas do P2: " + str(tokens_p2))
 
 def main():
     throw = 1
