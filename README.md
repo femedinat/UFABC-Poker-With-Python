@@ -8,12 +8,12 @@ Create a simplified 2 player Poker game: Player (human - player 1) versus Comput
 
 #### Start of the Game and Deal of Cards:
 
-Each player starts with 1000 chips to bet
+Each player starts with 1000 chips to bet.
 
 The game deals 4 cards to each player and 1 community card. Player 1's cards
 (P1) and the community card are shown on the screen. Player 2 (P2) cards are not revealed
 to P1. Remembering that the Poker hand is formed by 5 cards, in this simplified game, 4 of
-player and 1 community
+player and 1 community.
 
 The **first round of betting** is mandatory and starts with P1. The stake is on
 minimum of 1 up to the chip limit of P1 or P2 (minimum(P1,P2)). The game should read the value
