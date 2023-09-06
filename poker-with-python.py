@@ -73,7 +73,9 @@ def play(throw, hand_p1, hand_p2, communal, deck, moves):
 
     bet_max = min([tokens_p1, tokens_p2])
     print("\nRodada: " + str(throw))
-    bet = int(input("Valor da aposta (min: %s - max: %s): " % (1, bet_max)))
+    print("Suas cartas: " + ", ".join(hand_p1))
+    print("Carta comunitária: " + communal[0])
+    bet = int(input("\nValor da aposta (min: %s - max: %s): " % (1, bet_max)))
 
     if bet < 1 or bet > bet_max:
         return print("\nAposta inválida!")
@@ -87,7 +89,6 @@ def play(throw, hand_p1, hand_p2, communal, deck, moves):
         return print("\nP2 Desistiu...")
 
     elif move_p2 == 'aumentar':
-        print(bet, bet_max)
         bet_p2 = r.randint(bet, bet_max)
         print("\nP2 decidiu aumentar a aposta... Valor da aposta no momento: " + str(bet_p2))
         decider   = str(input("\nVocê deseja cobrir com mais %s fichas ou desistir da aposta? " % (bet_p2 - bet)))
@@ -110,9 +111,7 @@ def play(throw, hand_p1, hand_p2, communal, deck, moves):
         print("\nP2 continuou com a aposta...")
 
     print("\nRevelando Cartas...")
-    print("\nSua mão: " + ", ".join(hand_p1))
     print("\nMão P2: " + ", ".join(hand_p2))
-    print("\nCarta comunitária: " + communal[0])
 
     hand_p1.append(communal[0])
     hand_p2.append(communal[0])
